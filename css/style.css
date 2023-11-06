@@ -1,0 +1,212 @@
+/* 要求1 */
+#logo {
+    animation: logoGrowAndFadeIn 5s 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes logoGrowAndFadeIn {
+    from {
+      width: 25px;
+      opacity: 0;
+    }
+    to {
+      width: 475px;
+      opacity: 1;
+    }
+  }
+/* 要求2 */
+body {
+    font-family: 'Poppins', serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* 要求3 */
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 要求4 */
+.nav_links{
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* 要求5 */
+a:visited{
+    color: #0000EE;
+}
+
+
+
+/* 要求6 */
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+
+
+/* 要求7 */
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 450px;
+    border-radius: 50px 50px 0 0;
+}
+
+/* 要求8 */
+.pricing {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+  /* 要求9 */
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+    
+    /* height: 200px; */
+  }
+
+
+/* 要求10 */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+   
+    
+  }
+  
+
+
+@media screen and (min-width: 900px) {
+/* requirement 11 for header */
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; 
+       
+    }
+
+/* requirement 11 for nav_links */
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+    }
+
+
+
+
+
+
+/* 要求12 */   
+.pricing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; 
+    
+  }
+
+.card {
+    flex: 0 1 275px;
+
+}
+
+/* 要求13 */
+body > header{
+    position: fixed;
+    top: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+}
+
+main{
+    margin-top: 100px;
+}
+
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+      animation: none;
+      width: 475px; /* Set to final state width */
+      opacity: 1; /* Set to final state opacity */
+    }
+  }
+
+
+
+
+
+
+@media print{
+    
+    
+    /* requirement 15, 16 */
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-image: none;
+    }
+    
+    /* 要求17 */
+    nav{
+        width: 100%;
+    }
+
+    .nav_links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    /* 要求18 */
+    .pricing{
+        
+        flex-wrap: nowrap;
+        align-items: flex-end;
+    }
+
+    /* 要求19 */
+    .card{
+        border: 2px solid #45ADDD;
+        flex-basis: 325px;
+    }
+
+    /* 要求20 */
+    #gallery, .gallery{
+        display: none;
+    }
+
+    /* 要求21 */
+    main li:nth-child(2):after {
+        content: ' \1F44D';
+      }
+
+}
